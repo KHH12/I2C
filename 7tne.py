@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from tensorflow import keras
 
 # 학습된 모델을 LOAD
-model = keras.models.load_model('My_MNIST_CNN_DATA.h5')
+model = keras.models.load_model('my_model.h5')
 model.summary()
 
 drawing = False  # True is Mouse Click
@@ -42,7 +42,7 @@ def answer(img):
     print('Confidence:', confidence, '%')
 
 # 웹캠 스트림 열기
-cap = cv2.VideoCapture(2)
+cap = cv2.VideoCapture(0)
 
 # 창 생성 및 마우스 콜백 등록
 cv2.namedWindow('image')
